@@ -274,7 +274,11 @@ class Data_processor:
         cont(self.write_into_file(gift_format_questions))
 
     def write_into_file(self, content: str):
-        
+        """_summary_
+        writes the gift formatted questions into the output txt file, appending to it if it already exists and is not empty
+        Args:
+            content (str): the gift formatted questions to write into the output txt file
+        """
         if os.path.exists(self.output_path):
             if os.path.getsize(self.output_path) > 0:
                 with open(self.output_path, "a", encoding="utf-8") as file:
